@@ -6,7 +6,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Transaction } from '../../model/transaction';
 
 interface Props {
-  transactions: Transaction[];
+  transactions: Transaction[] | undefined;
   onEdit: (id: number) => void;
   onDelete: (id: number) => void;
 }

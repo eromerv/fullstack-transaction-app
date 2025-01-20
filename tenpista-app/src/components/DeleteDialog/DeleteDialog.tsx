@@ -20,7 +20,7 @@ const DeleteDialog: React.FC<Props> = ({
   open,
   onClose,
   onConfirm,
-  message = 'Are you sure you want to delete this transaction? This action cannot be undone.',
+  message = 'Please confirm if you wish to delete this record.',
   title = 'Confirm Deletion',
 }) => {
   return (

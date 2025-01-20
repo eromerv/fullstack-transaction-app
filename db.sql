@@ -27,3 +27,6 @@ INSERT INTO public.transactions (id, amount, merchant, customer, transaction_dat
 (8, 2000, 'Best Buy', 'Frank Harris', '2025-01-01 08:05:55', '2025-01-01 08:05:55'),
 (9, 3000, 'Costco', 'Grace Lee', '2024-12-31 14:40:25', '2024-12-31 14:40:25'),
 (10, 700, 'Uber Eats', 'Henry Adams', '2024-12-30 19:50:10', '2024-12-30 19:50:10');
+
+SELECT setval('transactions_id_seq', (SELECT MAX(id) FROM transactions) + 1);
+

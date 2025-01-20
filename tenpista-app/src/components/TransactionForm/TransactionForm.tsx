@@ -11,7 +11,7 @@ import {
 import { Transaction } from '../../model/transaction';
 import { getLocalDateTime } from '../../util/getLocalDate';
 
-interface EditTransactionDialogProps {
+interface Props {
   open: boolean;
   transaction: Transaction | null;
   onClose: () => void;
@@ -25,7 +25,7 @@ const initialFormData = {
   transactionDate: '',
 };
 
-const TransactionForm: React.FC<EditTransactionDialogProps> = ({
+const TransactionForm: React.FC<Props> = ({
   open,
   transaction,
   onClose,

@@ -13,7 +13,7 @@ import { useTransaction } from '../hooks/useTransaction';
 import { Transaction } from '../model/transaction';
 import TransactionsTable from '../components/TransactionsTable/TransactionsTable';
 import DeleteDialog from '../components/DeleteDialog/DeleteDialog';
-import TransactionDialogForm from '../components/TransactionForm/TransactionForm';
+import TransactionForm from '../components/TransactionForm/TransactionForm';
 
 const Dashboard = () => {
   const {
@@ -92,17 +92,24 @@ const Dashboard = () => {
         <Grid container spacing={2}>
           <Grid size={12}>
             <Box
-              display="flex"
-              alignItems="center"
-              justifyContent="space-between"
+              sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', sm: 'row' },
+                alignItems: { xs: 'center', sm: 'flex-start' },
+                justifyContent: 'space-between',
+                mt: 3,
+              }}
             >
-              <Typography variant="h4" gutterBottom>
+              <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold' }}>
                 Transactions
               </Typography>
               <Button
                 variant="contained"
                 color="primary"
                 onClick={handleCreateTransaction}
+                sx={{
+                  width: { xs: '100%', sm: 'auto' },
+                }}
               >
                 Add Transaction
               </Button>
@@ -114,17 +121,15 @@ const Dashboard = () => {
                 <Skeleton animation="wave" height={40} />
               </Box>
             ) : (
-              data && (
-                <TransactionsTable
-                  transactions={data}
-                  onEdit={handleEdit}
-                  onDelete={handleDelete}
-                />
-              )
+              <TransactionsTable
+                transactions={data}
+                onEdit={handleEdit}
+                onDelete={handleDelete}
+              />
             )}
           </Grid>
           <Grid size={12}>
-            <TransactionDialogForm
+            <TransactionForm
               open={openEditDialog}
               transaction={selectedTransaction}
               onClose={() => setOpenEditDialog(false)}
