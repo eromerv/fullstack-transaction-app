@@ -2,6 +2,8 @@
 
 A FullStack transaction management app using React and Spring Boot, with PostgreSQL, Docker support, and REST API for CRUD operations. Features include rate limiting, error handling, and a responsive UI (MUI). ✨
 
+![swagger](./doc/swagger-ui.png)
+
 ---
 
 ## Clone the Repository 📂
@@ -83,10 +85,6 @@ This will stop and remove all containers, networks, and volumes created by `dock
 ## Demo 🎥
 
 ![demo](./doc/app.gif)
-
-### Swagger UI:
-
-![swagger](./doc/swagger-ui.png)
 
 ---
 
