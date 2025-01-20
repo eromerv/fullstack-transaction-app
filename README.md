@@ -82,13 +82,7 @@ This will stop and remove all containers, networks, and volumes created by `dock
 
 ## Demo 🎥
 
-### Frontend Interface:
-
-![app](./doc/app.png)
-
-### Swagger UI:
-
-![swagger](./doc/swagger-ui.png)
+![demo](./doc/app.gif)
 
 ---
 
