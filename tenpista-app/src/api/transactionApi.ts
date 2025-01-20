@@ -4,7 +4,7 @@ import { Transaction } from '../model/transaction';
 
 const axiosInstance = axios.create({
   baseURL: config.api.baseURL,
-  timeout: 5000,
+  timeout: 15000,
   headers: {
     'Content-Type': 'application/json',
   },
